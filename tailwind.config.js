@@ -12,9 +12,14 @@ module.exports = {
           "0%": { opacity: "0" },
           "100%": { opacity: "100%" },
         },
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-33.333%)" },
+        },
       },
       animation: {
         "fade-in": "fade .5s ease-out forwards",
+        marquee: "marquee 25s linear infinite",
       },
     },
   },
