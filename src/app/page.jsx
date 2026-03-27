@@ -5,7 +5,7 @@ import Image from "next/image";
 import Landing from "./Landing";
 import Footer from "./Footer";
 
-const sponsors = [
+const pastPartnersAndSponsors = [
   "TechVentures",
   "StartupLabs",
   "InnovateNow",
@@ -44,10 +44,16 @@ export default function Home() {
     <>
       <Landing />
 
-      {/* Sponsors Ticker */}
+      {/* Past Partners and Sponsors Ticker */}
       <section className="relative z-10 overflow-hidden py-12">
-        <div className="flex animate-marquee whitespace-nowrap">
-          {[...sponsors, ...sponsors, ...sponsors].map((sponsor, i) => (
+        <div className="mx-auto mb-6 w-[min(1120px,92%)]">
+          <h2 className="text-3xl font-bold md:text-4xl">
+            Past Partners &amp; Sponsors
+          </h2>
+        </div>
+        <div className="partners-marquee flex whitespace-nowrap">
+          {[...pastPartnersAndSponsors, ...pastPartnersAndSponsors].map(
+            (sponsor, i) => (
             <div
               key={i}
               className="mx-6 inline-flex items-center justify-center rounded-3xl border border-white/20 bg-white/5 px-8 py-4 backdrop-blur-md"
@@ -56,7 +62,8 @@ export default function Home() {
                 {sponsor}
               </span>
             </div>
-          ))}
+            )
+          )}
         </div>
       </section>
 
@@ -217,6 +224,22 @@ export default function Home() {
       <div ref={footerRef}>
         <Footer />
       </div>
+
+      <style jsx>{`
+        .partners-marquee {
+          width: max-content;
+          animation: scroll-left 30s linear infinite;
+        }
+
+        @keyframes scroll-left {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
     </>
   );
 }
