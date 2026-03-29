@@ -5,7 +5,7 @@ const featuredVenture = {
   name: "FlowState",
   tags: ["AI", "Productivity"],
   description:
-    "A productivity app that uses AI to help students manage their time and stay focused. Trusted by 200+ students across campus — growing fast in beta.",
+    "A productivity app that uses AI to help students manage their time and stay focused. Trusted by 200+ students across campus, growing fast in beta.",
   stats: ["200+ users", "Beta"],
   founders: ["Sarah Chen", "David Kim"],
 };
@@ -87,7 +87,7 @@ export default function VenturesPage() {
             Our Ventures
           </h1>
           <p className="mt-5 text-xl leading-relaxed text-white/55">
-            From idea to impact — real products built by students at Queen's.
+            From idea to impact, real products built by students at Queen's.
           </p>
         </div>
       </section>
