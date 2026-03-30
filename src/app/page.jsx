@@ -6,14 +6,71 @@ import Landing from "./Landing";
 import Footer from "./Footer";
 
 const pastPartnersAndSponsors = [
-  "TechVentures",
-  "StartupLabs",
-  "InnovateNow",
-  "VentureHub",
-  "SeedFund",
-  "GrowthPartners",
-  "NextGen Capital",
-  "FutureBuilders",
+  "webapp.io",
+  "AWS",
+  "TD",
+  "IBM",
+  "Lucky Iron Fish",
+  "Dunin-Deshpande Queen's Innovation Centre",
+  "Women's Equity Lab",
+  "Google",
+  "Forbes Technology Council",
+  "MESHAI.io",
+  "Smith School of Business",
+  "1 Million Teachers",
+  "Amazon",
+  "AJL",
+  "Ripple Ventures",
+  "PureFacts",
+  "Creative Destruction Lab",
+  "Smith Engineering",
+];
+
+const alumniPlacements = [
+  "Meta",
+  "BCG",
+  "IBM",
+  "CLEARCO",
+  "Accenture",
+  "RBC",
+  "CIBC",
+  "P&G",
+  "BMO",
+  "Scotiabank",
+  "Deloitte",
+  "Microsoft",
+  "Tesla",
+  "AWS",
+  "Dell",
+  "Bain & Company",
+  "Wave",
+];
+
+const currentProjects = [
+  {
+    name: "Paperboy",
+    type: "Mobile App",
+    description:
+      "Transforms the newsletters you receive each morning into a single, personalized audio briefing. Press play and stay informed during your commute or morning routine.",
+  },
+  {
+    name: "Orbit",
+    type: "Web Platform",
+    description:
+      "A centralized digital platform to modernize lost and found. Users upload or drop items at partnered hubs, and a matching algorithm connects them to the most likely results.",
+  },
+  {
+    name: "Pantri",
+    type: "Mobile App",
+    description:
+      "A meal-generation app that creates recipes from commonly-used ingredients students already have to help reduce food waste and stay within a grocery budget.",
+  },
+  {
+    name: "KDC Management",
+    type: "Management Platform",
+    description:
+      "A part-time worker management system to help managers in workflow management and ease of scheduling to increase productivity and employee retention.",
+  },
 ];
 
 export default function Home() {
@@ -64,6 +121,26 @@ export default function Home() {
             </div>
             )
           )}
+        </div>
+      </section>
+
+      {/* Alumni Placements */}
+      <section className="relative z-10 mx-auto w-[min(1120px,92%)] py-16">
+        <h2 className="text-4xl font-bold">Where Our Alumni Work</h2>
+        <p className="mt-2 text-white/60">
+          inQUbate alumni have gone on to top companies worldwide.
+        </p>
+        <div className="mt-8 flex flex-wrap gap-3">
+          {alumniPlacements.map((company, i) => (
+            <div
+              key={i}
+              className="rounded-full border border-white/20 bg-white/5 px-5 py-2.5 backdrop-blur-md transition hover:bg-white/10"
+            >
+              <span className="text-sm font-semibold text-white/85">
+                {company}
+              </span>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -127,42 +204,67 @@ export default function Home() {
           className="pointer-events-none absolute -right-1/4 top-0 -z-10 opacity-20"
         />
         <h2 className="text-4xl font-bold">What Our Members Say</h2>
+        <div className="mt-8">
+          <div className="rounded-3xl border border-white/20 bg-white/5 p-8 backdrop-blur-md md:p-10">
+            <p className="text-lg leading-relaxed text-white/85">
+              &ldquo;As a Commerce student with intersecting interests in
+              business problem-solving and venture, inQUbate taught me the
+              necessary community and foundation to design, build, and scale
+              meaningful solutions tackling urgent real-world challenges. I left
+              inQUbate with a deeper understanding about emerging tech,
+              hypothesis validation through data, shipping products, and the
+              operating skills to bring something from 0 to 1. It also connected
+              me to a rich network of ambitious peers and successful alumni
+              across tech, consulting, and venture around the world. My journey
+              across tech strategy, consulting, and venture building
+              wouldn&apos;t have been possible without the leadership experience
+              and foundation I gained through inQUbate!&rdquo;
+            </p>
+            <div className="mt-6 flex items-center gap-4">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-sm font-bold">
+                SK
+              </div>
+              <div>
+                <p className="font-semibold">Sunghoon Kim</p>
+                <p className="text-sm text-white/60">
+                  Commerce Student | Tesla, Tenstorrent, OTPP
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Current Projects Section */}
+      <section className="relative z-10 mx-auto w-[min(1120px,92%)] py-16">
+        <Image
+          src="/red-gradient.svg"
+          width={900}
+          height={700}
+          alt=""
+          className="pointer-events-none absolute -left-1/3 top-0 -z-10 opacity-25"
+        />
+        <h2 className="text-4xl font-bold">Current Projects</h2>
+        <p className="mt-2 text-white/60">
+          Ventures currently being built at inQUbate.
+        </p>
         <div className="mt-8 grid gap-6 md:grid-cols-2">
-          <div className="rounded-3xl border border-white/20 bg-white/5 p-8 backdrop-blur-md">
-            <p className="text-lg leading-relaxed text-white/85">
-              &ldquo;inqubate gave me the confidence and resources to take my
-              idea from a napkin sketch to a working prototype. The mentorship
-              here is unmatched.&rdquo;
-            </p>
-            <div className="mt-6">
-              <p className="font-semibold">Sarah Chen</p>
-              <p className="text-sm text-white/60">Co-founder, FlowState</p>
-            </div>
-          </div>
-          <div className="rounded-3xl border border-white/20 bg-white/5 p-8 backdrop-blur-md">
-            <p className="text-lg leading-relaxed text-white/85">
-              &ldquo;The community at inqubate is incredible. I&apos;ve met
-              co-founders, advisors, and lifelong friends—all while building
-              something I&apos;m proud of.&rdquo;
-            </p>
-            <div className="mt-6">
-              <p className="font-semibold">Marcus Torres</p>
-              <p className="text-sm text-white/60">Founder, StudySync</p>
-            </div>
-          </div>
-          <div className="rounded-3xl border border-white/20 bg-white/5 p-8 backdrop-blur-md">
-            <p className="text-lg leading-relaxed text-white/85">
-              &ldquo;I joined with zero business experience. Now I&apos;m
-              pitching to investors and shipping features every week. inqubate
-              made that possible.&rdquo;
-            </p>
-            <div className="mt-6">
-              <p className="font-semibold">Aisha Patel</p>
-              <p className="text-sm text-white/60">
-                Founder, CampusConnect
+          {currentProjects.map((project, i) => (
+            <div
+              key={i}
+              className="rounded-3xl border border-white/20 bg-white/5 p-8 backdrop-blur-md transition hover:bg-white/10"
+            >
+              <div className="flex items-start justify-between">
+                <h3 className="text-2xl font-semibold">{project.name}</h3>
+                <span className="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold">
+                  {project.type}
+                </span>
+              </div>
+              <p className="mt-4 leading-relaxed text-white/85">
+                {project.description}
               </p>
             </div>
-          </div>
+          ))}
         </div>
       </section>
 

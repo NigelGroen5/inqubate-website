@@ -3,32 +3,28 @@ import Footer from "../Footer";
 
 const currentVentures = [
   {
-    name: "FlowState",
+    name: "Paperboy",
     description:
-      "A productivity app that uses AI to help students manage their time and stay focused. Currently in beta with 200+ active users across campus.",
-    founders: "Sarah Chen, David Kim",
-    stage: "Beta",
+      "A mobile app that transforms the newsletters you receive each morning into a single, personalized audio briefing. Instead of reading through a crowded inbox, users can simply press play and stay informed during their commute or morning routine.",
+    stage: "Mobile App",
   },
   {
-    name: "StudySync",
+    name: "Orbit",
     description:
-      "Peer-to-peer study group matching platform. Connects students based on courses, learning styles, and schedules. Raised $15k in pre-seed funding.",
-    founders: "Marcus Torres",
-    stage: "Pre-seed",
+      "A centralized digital platform to modernize lost and found. Users can upload lost or found items with location data or drop them at the nearest partnered hub, and a matching algorithm connects them to the most likely results — eliminating the need to search blindly across campus.",
+    stage: "Web Platform",
   },
   {
-    name: "CampusConnect",
+    name: "Pantri",
     description:
-      "Mobile app for discovering campus events, clubs, and communities. Launched at Queen's in January 2025 with over 800 downloads in the first month.",
-    founders: "Aisha Patel, Jordan Lee",
-    stage: "Live",
+      "A meal-generation app that creates recipes from commonly-used ingredients students already have to help them reduce food waste and stay within a recurring grocery budget.",
+    stage: "Mobile App",
   },
   {
-    name: "GreenRoute",
+    name: "KDC Management",
     description:
-      "Sustainable campus delivery service using electric bikes. Partnered with local restaurants to reduce carbon footprint while delivering food faster.",
-    founders: "Emma Rodriguez, Tyler Chen",
-    stage: "Pilot",
+      "A part-time worker management system to help managers in workflow management and ease of scheduling to increase productivity and employee retention.",
+    stage: "Management Platform",
   },
 ];
 
@@ -90,11 +86,13 @@ export default function VenturesPage() {
               <p className="mt-4 leading-relaxed text-white/85">
                 {venture.description}
               </p>
-              <div className="mt-6 border-t border-white/10 pt-4">
-                <p className="text-sm text-white/60">
-                  Founded by {venture.founders}
-                </p>
-              </div>
+              {venture.founders && (
+                <div className="mt-6 border-t border-white/10 pt-4">
+                  <p className="text-sm text-white/60">
+                    Founded by {venture.founders}
+                  </p>
+                </div>
+              )}
             </div>
           ))}
         </div>
