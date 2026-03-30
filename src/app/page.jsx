@@ -166,25 +166,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Alumni Placements */}
-      <section className="relative z-10 mx-auto w-[min(1120px,92%)] py-16">
-        <h2 className="text-4xl font-bold">Where Our Alumni Work</h2>
-        <p className="mt-2 text-white/60">
-          inQUbate alumni have gone on to top companies worldwide.
-        </p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          {alumniPlacements.map((company, i) => (
-            <div
-              key={i}
-              className="rounded-full border border-white/20 bg-white/5 px-5 py-2.5 backdrop-blur-md transition hover:bg-white/10"
-            >
-              <span className="text-sm font-semibold text-white/85">
-                {company}
-              </span>
-            </div>
-          ))}
-        </div>
-      </section>
+
 
       {/* About Section */}
       <section className="relative z-10 mx-auto w-[min(1120px,92%)] py-16">

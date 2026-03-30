@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -16,7 +17,16 @@ export default function Navbar() {
   return (
     <header className="relative z-20 mx-auto w-[min(1120px,92%)] pt-6">
       <nav className="flex flex-wrap items-center justify-between gap-4 rounded-full border border-white/20 bg-white/5 px-5 py-3 backdrop-blur-md">
-        <p className="text-lg font-semibold tracking-wide">inqubate</p>
+        <Link href="/" aria-label="inqubate home" className="flex items-center">
+          <Image
+            src="/logo.png"
+            alt="inqubate logo"
+            width={132}
+            height={36}
+            priority
+            className="h-9 w-auto"
+          />
+        </Link>
         <ul className="flex flex-wrap items-center gap-2 text-sm md:text-base">
           {tabs.map((tab) => (
             <li key={tab.label}>

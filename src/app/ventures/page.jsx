@@ -1,3 +1,6 @@
+ "use client";
+
+import { useEffect, useRef, useState } from "react";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 
@@ -236,6 +239,40 @@ function MarqueeLogos({ logos }) {
   );
 }
 
+function Reveal({ children, className = "", delay = 0 }) {
+  const ref = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.16, rootMargin: "0px 0px -10% 0px" }
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      style={{ transitionDelay: `${delay}ms` }}
+      className={`${className} transition-all duration-700 ease-out will-change-transform ${
+        isVisible
+          ? "translate-y-0 opacity-100 blur-0"
+          : "translate-y-8 opacity-0 blur-sm"
+      }`}
+    >
+      {children}
+    </div>
+  );
+}
+
 // ─────────────────────────────────────────────────────────────────────────────
 // PAGE
 // ─────────────────────────────────────────────────────────────────────────────
@@ -247,7 +284,7 @@ export default function VenturesPage() {
 
       {/* Hero */}
       <section className="relative z-10 mx-auto w-[min(1120px,92%)] pb-8 pt-20">
-        <div className="animate-fade-in max-w-2xl">
+        <Reveal className="max-w-2xl">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-white/35">
             inQUbate Portfolio
           </p>
@@ -257,11 +294,12 @@ export default function VenturesPage() {
           <p className="mt-5 text-xl leading-relaxed text-white/55">
             From idea to impact, real products built by students at Queen&apos;s.
           </p>
-        </div>
+        </Reveal>
       </section>
 
       {/* Featured Venture */}
       <section className="relative z-10 mx-auto w-[min(1120px,92%)] py-10">
+        <Reveal>
         <div className="group relative overflow-hidden rounded-3xl border border-white/15 bg-white/5 backdrop-blur-md transition-all duration-500 hover:border-white/25 hover:bg-white/[0.07]">
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/[0.04] via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
@@ -321,13 +359,17 @@ export default function VenturesPage() {
             </div>
           </div>
         </div>
+        </Reveal>
       </section>
 
       {/* Current Ventures (alternating) */}
       <section className="relative z-10 mx-auto w-[min(1120px,92%)] space-y-8 py-10">
-        <h2 className="text-3xl font-bold">Current Ventures</h2>
+        <Reveal>
+          <h2 className="text-3xl font-bold">Current Ventures</h2>
+        </Reveal>
 
-        {currentVentures.map((venture) => (
+        {currentVentures.map((venture, index) => (
+          <Reveal key={venture.name} delay={index * 90}>
           <div
             key={venture.name}
             className={`group flex flex-col gap-8 rounded-3xl border border-white/10 bg-white/[0.04] p-8 backdrop-blur-sm transition-all duration-300 hover:border-white/20 hover:bg-white/[0.07] md:items-center md:p-10 md:flex-row ${
@@ -370,35 +412,40 @@ export default function VenturesPage() {
               </div>
             </div>
           </div>
+          </Reveal>
         ))}
       </section>
 
       {/* Past Ventures grid */}
       <section className="relative z-10 mx-auto w-[min(1120px,92%)] py-16">
-        <div className="mb-10">
+        <Reveal className="mb-10">
           <h2 className="text-3xl font-bold">Past Ventures</h2>
           <p className="mt-2 text-white/45">
             Alumni ventures that have moved on to new chapters.
           </p>
-        </div>
+        </Reveal>
 
         <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3">
-          {pastVentures.map((venture) => (
-            <PastVentureCard key={venture.name} venture={venture} />
+          {pastVentures.map((venture, index) => (
+            <Reveal key={venture.name} delay={index * 90}>
+              <PastVentureCard venture={venture} />
+            </Reveal>
           ))}
         </div>
       </section>
 
       {/* Alumni Outcomes */}
       <section className="relative z-10 py-20">
-        <div className="mx-auto mb-12 w-[min(1120px,92%)] text-center">
+        <Reveal className="mx-auto mb-12 w-[min(1120px,92%)] text-center">
           <h2 className="text-4xl font-bold">Alumni Outcomes</h2>
           <p className="mt-4 text-lg text-white/45">
             inQUbate alumni go on to succeed at top companies and startups.
           </p>
-        </div>
+        </Reveal>
 
-        <MarqueeLogos logos={companyLogos} />
+        <Reveal delay={120}>
+          <MarqueeLogos logos={companyLogos} />
+        </Reveal>
       </section>
 
       <Footer />

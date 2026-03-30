@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 
 export default function Landing() {
   return (
-    <div className="relative mb-36">
+    <div className="relative mb-20 md:mb-24">
       <Tube />
       <Navbar />
       <Image
@@ -21,7 +21,7 @@ export default function Landing() {
         alt="blue gradient"
         className="absolute -z-30 right-0 top-0"
       />
-      <div className="relative h-[80vh] px-6 md:px-10">
+      <div className="relative h-[68vh] min-h-[560px] px-6 md:h-[72vh] md:px-10">
         <div className="animate-fade-in pt-28 md:absolute md:left-[1.5%] md:top-[56%] md:w-[420px] md:-translate-y-1/2 md:pt-0">
           <h1 className="w-96 text-6xl font-bold leading-snug">
             Queen&apos;s <br /> #1 Incubator

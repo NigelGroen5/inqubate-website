@@ -1,8 +1,13 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Landing",
+  title: "InQUbate",
   description: "Landing hero",
+  icons: {
+    icon: "/logo_2.png",
+    shortcut: "/logo_2.png",
+    apple: "/logo_2.png",
+  },
 };
 
 export default function RootLayout({ children }) {
