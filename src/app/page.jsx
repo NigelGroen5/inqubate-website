@@ -171,14 +171,21 @@ export default function Home() {
       {/* About Section */}
       <section className="relative z-10 mx-auto w-[min(1120px,92%)] py-16">
         <div className="animate-fade-in">
-          <h2 className="text-4xl font-bold">About inqubate</h2>
+          <h2 className="text-4xl font-bold">What is InQUbate?</h2>
           <p className="mt-6 text-lg leading-relaxed text-white/85">
-            We&apos;re a student-led incubator dedicated to turning ideas into
-            reality. Whether you&apos;re building your first startup, launching
-            a side project, or just exploring entrepreneurship, inqubate
-            provides the resources, mentorship, and community you need to
-            succeed. From ideation to execution, we&apos;re here to help you
-            grow.
+            We are Canada&apos;s first AI startup incubator dedicated to
+            empowering student entrepreneurs to build and scale pre-seed
+            ventures in the disruptive technology space. Throughout the
+            program, teams refine their business models and develop technical
+            products with real market validation. We provide 360° support,
+            combining hands-on guidance, educational resources, and access to a
+            strong professional network. Our focus is on helping students
+            create commercially viable technologies while securing the funding
+            needed to bring their ideas to life. Participants gain valuable
+            experience through mentorship, speakers, and structured product and
+            project support to keep their ventures on track. The program
+            culminates in a demo day event, where teams pitch their startups
+            and showcase their progress.
           </p>
         </div>
       </section>
@@ -190,29 +197,50 @@ export default function Home() {
           width={900}
           height={700}
           alt=""
-          className="pointer-events-none absolute -left-1/4 top-0 -z-10 opacity-30"
+          className="pointer-events-none absolute -left-1/4 top-0 -z-10 opacity-25"
         />
-        <h2 className="text-4xl font-bold">Our Mission</h2>
-        <div className="mt-8 grid gap-6 md:grid-cols-3">
-          <div className="rounded-3xl border border-white/20 bg-white/5 p-6 backdrop-blur-md">
-            <h3 className="text-xl font-semibold">Innovate</h3>
+        <Image
+          src="/blue-gradient.svg"
+          width={1000}
+          height={700}
+          alt=""
+          className="pointer-events-none absolute -right-1/4 top-0 -z-10 opacity-20"
+        />
+        <h2 className="text-4xl font-bold">What We Provide</h2>
+        <div className="mt-8 grid gap-6 md:grid-cols-2">
+          <div className="rounded-3xl border border-white/20 bg-white/5 p-7 backdrop-blur-md">
+            <div className="mb-5 h-1.5 w-20 rounded-full bg-gradient-to-r from-[#ff4e6e] to-[#52c7ff]" />
+            <h3 className="text-2xl font-semibold">
+              Venture Funding Opportunities
+            </h3>
             <p className="mt-3 text-white/85">
-              Push boundaries and challenge the status quo. We support bold
-              ideas that solve real problems.
+              Connect with VCs and other industry professionals.
             </p>
           </div>
-          <div className="rounded-3xl border border-white/20 bg-white/5 p-6 backdrop-blur-md">
-            <h3 className="text-xl font-semibold">Collaborate</h3>
+
+          <div className="rounded-3xl border border-white/20 bg-white/5 p-7 backdrop-blur-md">
+            <div className="mb-5 h-1.5 w-20 rounded-full bg-gradient-to-r from-[#ff4e6e] to-[#52c7ff]" />
+            <h3 className="text-2xl font-semibold">Skilled Network</h3>
             <p className="mt-3 text-white/85">
-              Work alongside passionate students, mentors, and industry
-              professionals who share your drive.
+              Join our community of founders and consultants.
             </p>
           </div>
-          <div className="rounded-3xl border border-white/20 bg-white/5 p-6 backdrop-blur-md">
-            <h3 className="text-xl font-semibold">Succeed</h3>
+
+          <div className="rounded-3xl border border-white/20 bg-white/5 p-7 backdrop-blur-md">
+            <div className="mb-5 h-1.5 w-20 rounded-full bg-gradient-to-r from-[#ff4e6e] to-[#52c7ff]" />
+            <h3 className="text-2xl font-semibold">Exclusive Resources</h3>
             <p className="mt-3 text-white/85">
-              Turn your vision into a viable venture with our support, funding
-              opportunities, and network.
+              Attend exclusive events, competitions, and trips.
+            </p>
+          </div>
+
+          <div className="rounded-3xl border border-white/20 bg-white/5 p-7 backdrop-blur-md">
+            <div className="mb-5 h-1.5 w-20 rounded-full bg-gradient-to-r from-[#ff4e6e] to-[#52c7ff]" />
+            <h3 className="text-2xl font-semibold">
+              Entrepreneurial Essentials
+            </h3>
+            <p className="mt-3 text-white/85">
+              Learn how to prepare and pitch your startup.
             </p>
           </div>
         </div>
