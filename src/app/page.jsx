@@ -7,35 +7,60 @@ import Footer from "./Footer";
 
 const pastPartnersAndSponsors = [
   { name: "webapp.io" },
-  { name: "AWS", logoSrc: "/partner-logos/aws.webp" },
-  { name: "TD", logoSrc: "/partner-logos/td.png" },
-  { name: "IBM", logoSrc: "/partner-logos/ibm.png" },
-  { name: "Lucky Iron Fish", logoSrc: "/partner-logos/lucky_iron_fish.png" },
+  { name: "AWS", logoSrc: "/partner-logos/aws.webp", logoScale: "scale-[1.1]" },
+  { name: "TD", logoSrc: "/partner-logos/td.png", logoScale: "scale-[1.08]" },
+  { name: "IBM", logoSrc: "/partner-logos/ibm.png", logoScale: "scale-[1.18]" },
+  {
+    name: "Lucky Iron Fish",
+    logoSrc: "/partner-logos/lucky_iron_fish.png",
+    logoScale: "scale-[1.12]",
+  },
   {
     name: "Dunin-Deshpande Queen's Innovation Centre",
     logoSrc: "/partner-logos/dunin.png",
+    logoScale: "scale-[1.14]",
   },
   {
     name: "Women's Equity Lab",
     logoSrc: "/partner-logos/womens_equity_lab.png",
+    logoScale: "scale-[1.08]",
   },
-  { name: "Google", logoSrc: "/partner-logos/google.jpeg" },
+  { name: "Google", logoSrc: "/partner-logos/google.png", logoScale: "scale-[1.06]" },
   {
     name: "Forbes Technology Council",
     logoSrc: "/partner-logos/forbes.png",
+    logoScale: "scale-[1.08]",
   },
-  { name: "MESHAI.io", logoSrc: "/partner-logos/meshai.jpeg" },
-  { name: "Smith School of Business", logoSrc: "/partner-logos/smith.png" },
-  { name: "1 Million Teachers", logoSrc: "/partner-logos/million_teachers.png" },
-  { name: "Amazon", logoSrc: "/partner-logos/amazon.png" },
-  { name: "AJL", logoSrc: "/partner-logos/ajl.png" },
-  { name: "Ripple Ventures", logoSrc: "/partner-logos/ripple.png" },
-  { name: "PureFacts", logoSrc: "/partner-logos/purefacts.png" },
+  { name: "MESHAI.io", logoSrc: "/partner-logos/meshai.jpeg", logoScale: "scale-[1.14]" },
+  {
+    name: "Smith School of Business",
+    logoSrc: "/partner-logos/smith.png",
+    logoScale: "scale-[1.06]",
+  },
+  {
+    name: "1 Million Teachers",
+    logoSrc: "/partner-logos/million_teachers.png",
+    logoScale: "scale-[1.12]",
+  },
+  { name: "Amazon", logoSrc: "/partner-logos/amazon.png", logoScale: "scale-[1.04]" },
+  { name: "AJL", logoSrc: "/partner-logos/ajl.png", logoScale: "scale-[1.08]" },
+  {
+    name: "Ripple Ventures",
+    logoSrc: "/partner-logos/ripple.png",
+    logoScale: "scale-[1.12]",
+    logoClassName: "object-cover",
+  },
+  { name: "PureFacts", logoSrc: "/partner-logos/purefacts.png", logoScale: "scale-[1.08]" },
   {
     name: "Creative Destruction Lab",
     logoSrc: "/partner-logos/creative_destruction.png",
+    logoScale: "scale-[1.08]",
   },
-  { name: "Smith Engineering", logoSrc: "/partner-logos/smith_eng.png" },
+  {
+    name: "Smith Engineering",
+    logoSrc: "/partner-logos/smith_eng.png",
+    logoScale: "scale-[1.06]",
+  },
 ];
 
 function PartnerLogo({ sponsor }) {
@@ -56,7 +81,7 @@ function PartnerLogo({ sponsor }) {
           src={sponsor.logoSrc}
           alt={`${sponsor.name} logo`}
           loading="lazy"
-          className="h-14 w-40 object-contain"
+          className={`h-14 w-40 ${sponsor.logoClassName ?? "object-contain"} transition-transform ${sponsor.logoScale ?? ""}`}
           onError={() => setHasError(true)}
         />
       </div>
@@ -86,33 +111,6 @@ const alumniPlacements = [
   "Dell",
   "Bain & Company",
   "Wave",
-];
-
-const currentProjects = [
-  {
-    name: "Paperboy",
-    type: "Mobile App",
-    description:
-      "Transforms the newsletters you receive each morning into a single, personalized audio briefing. Press play and stay informed during your commute or morning routine.",
-  },
-  {
-    name: "Orbit",
-    type: "Web Platform",
-    description:
-      "A centralized digital platform to modernize lost and found. Users upload or drop items at partnered hubs, and a matching algorithm connects them to the most likely results.",
-  },
-  {
-    name: "Pantri",
-    type: "Mobile App",
-    description:
-      "A meal-generation app that creates recipes from commonly-used ingredients students already have to help reduce food waste and stay within a grocery budget.",
-  },
-  {
-    name: "KDC Management",
-    type: "Management Platform",
-    description:
-      "A part-time worker management system to help managers in workflow management and ease of scheduling to increase productivity and employee retention.",
-  },
 ];
 
 export default function Home() {
@@ -284,39 +282,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Current Projects Section */}
-      <section className="relative z-10 mx-auto w-[min(1120px,92%)] py-16">
-        <Image
-          src="/red-gradient.svg"
-          width={900}
-          height={700}
-          alt=""
-          className="pointer-events-none absolute -left-1/3 top-0 -z-10 opacity-25"
-        />
-        <h2 className="text-4xl font-bold">Current Projects</h2>
-        <p className="mt-2 text-white/60">
-          Ventures currently being built at inQUbate.
-        </p>
-        <div className="mt-8 grid gap-6 md:grid-cols-2">
-          {currentProjects.map((project, i) => (
-            <div
-              key={i}
-              className="rounded-3xl border border-white/20 bg-white/5 p-8 backdrop-blur-md transition hover:bg-white/10"
-            >
-              <div className="flex items-start justify-between">
-                <h3 className="text-2xl font-semibold">{project.name}</h3>
-                <span className="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold">
-                  {project.type}
-                </span>
-              </div>
-              <p className="mt-4 leading-relaxed text-white/85">
-                {project.description}
-              </p>
-            </div>
-          ))}
         </div>
       </section>
 
