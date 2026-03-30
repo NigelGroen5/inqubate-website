@@ -6,58 +6,57 @@ import Footer from "../Footer";
 // ─────────────────────────────────────────────────────────────────────────────
 
 const featuredVenture = {
-  name: "FlowState",
-  tags: ["AI", "Productivity"],
+  name: "Paperboy",
+  tags: ["Audio", "Productivity"],
   description:
-    "A productivity app that uses AI to help students manage their time and stay focused. Trusted by 200+ students across campus, growing fast in beta.",
-  stats: ["200+ users", "Beta"],
+    "A mobile app that transforms your daily newsletters into a single, personalized audio briefing you can listen to on the go.",
+  stats: ["In Development"],
   founders: ["Sarah Chen", "David Kim"],
   thumbnail: "/placeholder-phone.png",
   logo: "/placeholder-logo.png",
-  // Uncomment when a real page is ready:
   ctaLabel: "Learn More",
-  ctaHref: "/ventures/flowstate",
+  ctaHref: "/ventures/paperboy",
 };
 
 const currentVentures = [
   {
-    name: "StudySync",
-    tags: ["EdTech", "P2P"],
+    name: "Orbit",
+    tags: ["Campus", "Matching"],
     description:
-      "Peer-to-peer study group matching platform. Connects students based on courses, learning styles, and schedules. Raised $15k in pre-seed funding.",
-    founders: ["Marcus Torres"],
-    stage: "Pre-seed",
-    thumbnail: "/placeholder-web.png",
-    logo: "/placeholder-logo.png",
-    imageRight: false,
-    ctaLabel: "View Venture",
-    ctaHref: "/ventures/studysync",
-  },
-  {
-    name: "CampusConnect",
-    tags: ["Mobile", "Social"],
-    description:
-      "Mobile app for discovering campus events, clubs, and communities. Launched at Queen's in January 2025 with over 800 downloads in the first month.",
+      "A centralized digital platform to modernize lost and found. Users can upload lost or found items with location data or drop them at the nearest partnered hub, and a matching algorithm connects them to the most likely results, eliminating the need to search blindly across campus.",
     founders: ["Aisha Patel", "Jordan Lee"],
-    stage: "Live",
-    thumbnail: "/placeholder-phone.png",
+    stage: "Web Platform",
+    thumbnail: "/placeholder-web.png",
     logo: "/placeholder-logo.png",
     imageRight: true,
     ctaLabel: "View Venture",
-    ctaHref: "/ventures/campusconnect",
+    ctaHref: "/ventures/orbit",
   },
   {
-    name: "GreenRoute",
-    tags: ["Sustainability", "Logistics"],
+    name: "Pantri",
+    tags: ["Food", "Budgeting"],
     description:
-      "Sustainable campus delivery service using electric bikes. Partnered with local restaurants to reduce carbon footprint while delivering food faster.",
+      "A meal-generation app that creates recipes from commonly-used ingredients students already have to help them reduce food waste and stay within a recurring grocery budget.",
     founders: ["Emma Rodriguez", "Tyler Chen"],
-    stage: "Pilot",
-    thumbnail: "/placeholder-web.png",
+    stage: "Mobile App",
+    thumbnail: "/placeholder-phone.png",
     logo: "/placeholder-logo.png",
     imageRight: false,
     ctaLabel: "View Venture",
-    ctaHref: "/ventures/greenroute",
+    ctaHref: "/ventures/pantri",
+  },
+  {
+    name: "KDC Management",
+    tags: ["Operations", "Scheduling"],
+    description:
+      "A part-time worker management system to help managers in workflow management and ease of scheduling to increase productivity and employee retention.",
+    founders: ["Alex Johnson", "Maria Garcia"],
+    stage: "Management Platform",
+    thumbnail: "/placeholder-web.png",
+    logo: "/placeholder-logo.png",
+    imageRight: true,
+    ctaLabel: "View Venture",
+    ctaHref: "/ventures/kdc-management",
   },
 ];
 
