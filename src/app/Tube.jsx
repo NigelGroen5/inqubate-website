@@ -7,8 +7,10 @@ export default function Tube() {
         src="/tube.svg"
         width={0}
         height={0}
+        priority
         sizes="(min-width: 768px) calc(100vw - 10rem), calc(100vw - 3rem)"
         style={{ width: "95%", height: "1000px" }}
+        className="pointer-events-none select-none"
         alt="tube"
       />
     </div>

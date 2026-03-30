@@ -1,30 +1,72 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Landing from "./Landing";
 import Footer from "./Footer";
 
 const pastPartnersAndSponsors = [
-  "webapp.io",
-  "AWS",
-  "TD",
-  "IBM",
-  "Lucky Iron Fish",
-  "Dunin-Deshpande Queen's Innovation Centre",
-  "Women's Equity Lab",
-  "Google",
-  "Forbes Technology Council",
-  "MESHAI.io",
-  "Smith School of Business",
-  "1 Million Teachers",
-  "Amazon",
-  "AJL",
-  "Ripple Ventures",
-  "PureFacts",
-  "Creative Destruction Lab",
-  "Smith Engineering",
+  { name: "webapp.io" },
+  { name: "AWS", logoSrc: "/partner-logos/aws.webp" },
+  { name: "TD", logoSrc: "/partner-logos/td.png" },
+  { name: "IBM", logoSrc: "/partner-logos/ibm.png" },
+  { name: "Lucky Iron Fish", logoSrc: "/partner-logos/lucky_iron_fish.png" },
+  {
+    name: "Dunin-Deshpande Queen's Innovation Centre",
+    logoSrc: "/partner-logos/dunin.png",
+  },
+  {
+    name: "Women's Equity Lab",
+    logoSrc: "/partner-logos/womens_equity_lab.png",
+  },
+  { name: "Google", logoSrc: "/partner-logos/google.jpeg" },
+  {
+    name: "Forbes Technology Council",
+    logoSrc: "/partner-logos/forbes.png",
+  },
+  { name: "MESHAI.io", logoSrc: "/partner-logos/meshai.jpeg" },
+  { name: "Smith School of Business", logoSrc: "/partner-logos/smith.png" },
+  { name: "1 Million Teachers", logoSrc: "/partner-logos/million_teachers.png" },
+  { name: "Amazon", logoSrc: "/partner-logos/amazon.png" },
+  { name: "AJL", logoSrc: "/partner-logos/ajl.png" },
+  { name: "Ripple Ventures", logoSrc: "/partner-logos/ripple.png" },
+  { name: "PureFacts", logoSrc: "/partner-logos/purefacts.png" },
+  {
+    name: "Creative Destruction Lab",
+    logoSrc: "/partner-logos/creative_destruction.png",
+  },
+  { name: "Smith Engineering", logoSrc: "/partner-logos/smith_eng.png" },
 ];
+
+function PartnerLogo({ sponsor }) {
+  const [hasError, setHasError] = useState(false);
+
+  if (hasError) {
+    return (
+      <span className="text-center text-xs font-semibold uppercase tracking-[0.08em] text-neutral-900">
+        {sponsor.name}
+      </span>
+    );
+  }
+
+  return (
+    sponsor.logoSrc ? (
+      <div className="flex h-14 w-40 items-center justify-center">
+        <img
+          src={sponsor.logoSrc}
+          alt={`${sponsor.name} logo`}
+          loading="lazy"
+          className="h-14 w-40 object-contain"
+          onError={() => setHasError(true)}
+        />
+      </div>
+    ) : (
+      <span className="text-center text-xs font-semibold uppercase tracking-[0.08em] text-neutral-900">
+        {sponsor.name}
+      </span>
+    )
+  );
+}
 
 const alumniPlacements = [
   "Meta",
@@ -102,25 +144,25 @@ export default function Home() {
       <Landing />
 
       {/* Past Partners and Sponsors Ticker */}
-      <section className="relative z-10 overflow-hidden py-12">
+      <section className="relative z-10 -mt-6 overflow-hidden py-10">
         <div className="mx-auto mb-6 w-[min(1120px,92%)]">
           <h2 className="text-3xl font-bold md:text-4xl">
             Past Partners &amp; Sponsors
           </h2>
         </div>
-        <div className="partners-marquee flex whitespace-nowrap">
+        <div className="border-y border-black/10 bg-white py-7 shadow-[0_12px_32px_rgba(0,0,0,0.12)]">
+        <div className="partners-marquee flex items-center whitespace-nowrap">
           {[...pastPartnersAndSponsors, ...pastPartnersAndSponsors].map(
             (sponsor, i) => (
             <div
-              key={i}
-              className="mx-6 inline-flex items-center justify-center rounded-3xl border border-white/20 bg-white/5 px-8 py-4 backdrop-blur-md"
+              key={`${sponsor.name}-${i}`}
+              className="mx-6 inline-flex h-14 w-40 items-center justify-center"
             >
-              <span className="text-lg font-semibold text-white/85">
-                {sponsor}
-              </span>
+              <PartnerLogo sponsor={sponsor} />
             </div>
             )
           )}
+        </div>
         </div>
       </section>
 
