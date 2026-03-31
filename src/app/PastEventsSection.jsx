@@ -1,0 +1,48 @@
+import Image from "next/image";
+import Reveal from "./Reveal";
+
+const pastEvents = [
+  { title: "Founder Fireside Chat", imageSrc: "/event_1.JPG" },
+  { title: "Product Workshop", imageSrc: "/event_2.jpg" },
+  { title: "Pitch Night", imageSrc: "/event_3.jpg" },
+  { title: "Speaker Panel", imageSrc: "/event_4.png" },
+  { title: "Community Showcase", imageSrc: "/event_5.png" },
+];
+
+export default function PastEventsSection() {
+  return (
+    <section className="relative z-10 py-16">
+      <Image
+        src="/red-gradient.svg"
+        width={900}
+        height={700}
+        alt=""
+        className="pointer-events-none absolute -right-1/3 top-1/4 -z-10 opacity-25"
+      />
+      <Reveal className="mx-auto w-[min(1120px,92%)] text-center">
+        <h2 className="text-4xl font-bold md:text-5xl">Past Events &amp; Speakers</h2>
+        <p className="mt-3 text-lg text-white/70">
+          Check out some photos from past InQUbate events.
+        </p>
+      </Reveal>
+      <Reveal className="event-marquee-wrap mt-10 overflow-hidden">
+        <div className="event-marquee flex w-max gap-6 px-6 md:gap-8">
+        {[...pastEvents, ...pastEvents].map((event, index) => (
+          <div
+            key={`${event.title}-${index}`}
+            className="group w-[78vw] max-w-[560px] flex-none overflow-hidden rounded-[34px] border border-white/15 bg-white/[0.04] backdrop-blur-md transition duration-300 hover:scale-[1.01] hover:border-white/25 hover:bg-white/[0.06]"
+          >
+            <div className="relative h-[360px] overflow-hidden md:h-[420px]">
+              <img
+                src={event.imageSrc}
+                alt={event.title}
+                className="h-full w-full object-cover opacity-90 transition duration-500 group-hover:scale-[1.06]"
+              />
+            </div>
+          </div>
+        ))}
+        </div>
+      </Reveal>
+    </section>
+  );
+}
