@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Landing from "./Landing";
 import Footer from "./Footer";
+import WhatIsInqubateStats from "./WhatIsInqubateStats";
 
 const pastPartnersAndSponsors = [
   { name: "webapp.io" },
@@ -231,6 +232,7 @@ export default function Home() {
             culminates in a demo day event, where teams pitch their startups
             and showcase their progress.
           </p>
+          <WhatIsInqubateStats />
         </Reveal>
       </section>
 
