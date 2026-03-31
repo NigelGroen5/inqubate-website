@@ -93,6 +93,40 @@ function PartnerLogo({ sponsor }) {
   );
 }
 
+function Reveal({ children, className = "", delay = 0 }) {
+  const ref = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.16, rootMargin: "0px 0px -10% 0px" }
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      style={{ transitionDelay: `${delay}ms` }}
+      className={`${className} transition-all duration-700 ease-out will-change-transform ${
+        isVisible
+          ? "translate-y-0 opacity-100 blur-0"
+          : "translate-y-8 opacity-0 blur-sm"
+      }`}
+    >
+      {children}
+    </div>
+  );
+}
+
 const alumniPlacements = [
   "Meta",
   "BCG",
@@ -112,6 +146,16 @@ const alumniPlacements = [
   "Bain & Company",
   "Wave",
 ];
+
+const pastEvents = [
+  { title: "Founder Fireside Chat", imageSrc: "/event_1.JPG" },
+  { title: "Product Workshop", imageSrc: "/event_2.jpg" },
+  { title: "Pitch Night", imageSrc: "/event_3.jpg" },
+  { title: "Speaker Panel", imageSrc: "/event_4.png" },
+  { title: "Community Showcase", imageSrc: "/event_5.png" },
+];
+
+
 
 export default function Home() {
   const footerRef = useRef(null);
@@ -143,11 +187,12 @@ export default function Home() {
 
       {/* Past Partners and Sponsors Ticker */}
       <section className="relative z-10 -mt-6 overflow-hidden py-10">
-        <div className="mx-auto mb-6 w-[min(1120px,92%)]">
+        <Reveal className="mx-auto mb-6 w-[min(1120px,92%)]">
           <h2 className="text-3xl font-bold md:text-4xl">
             Past Partners &amp; Sponsors
           </h2>
-        </div>
+        </Reveal>
+        <Reveal>
         <div className="border-y border-black/10 bg-white py-7 shadow-[0_12px_32px_rgba(0,0,0,0.12)]">
         <div className="partners-marquee flex items-center whitespace-nowrap">
           {[...pastPartnersAndSponsors, ...pastPartnersAndSponsors].map(
@@ -162,13 +207,14 @@ export default function Home() {
           )}
         </div>
         </div>
+        </Reveal>
       </section>
 
 
 
       {/* About Section */}
       <section className="relative z-10 mx-auto w-[min(1120px,92%)] py-16">
-        <div className="animate-fade-in">
+        <Reveal>
           <h2 className="text-4xl font-bold">What is InQUbate?</h2>
           <p className="mt-6 text-lg leading-relaxed text-white/85">
             We are Canada&apos;s first AI startup incubator dedicated to
@@ -185,7 +231,7 @@ export default function Home() {
             culminates in a demo day event, where teams pitch their startups
             and showcase their progress.
           </p>
-        </div>
+        </Reveal>
       </section>
 
       {/* Values Section */}
@@ -204,43 +250,65 @@ export default function Home() {
           alt=""
           className="pointer-events-none absolute -right-1/4 top-0 -z-10 opacity-20"
         />
-        <h2 className="text-4xl font-bold">What We Provide</h2>
-        <div className="mt-8 grid gap-6 md:grid-cols-2">
-          <div className="rounded-3xl border border-white/20 bg-white/5 p-7 backdrop-blur-md">
-            <div className="mb-5 h-1.5 w-20 rounded-full bg-gradient-to-r from-[#ff4e6e] to-[#52c7ff]" />
-            <h3 className="text-2xl font-semibold">
+        <Reveal>
+          <h2 className="text-4xl font-bold">We Provide</h2>
+        </Reveal>
+        <div className="mt-8 grid gap-6 md:grid-cols-6">
+          <Reveal delay={0} className="md:col-span-4">
+          <div className="rounded-[30px] border border-white/15 bg-[linear-gradient(180deg,#9f163b_0%,#5a0d24_100%)] p-8 shadow-[0_18px_40px_rgba(0,0,0,0.18)] transition duration-300 hover:scale-[1.02] hover:border-white/30 hover:shadow-[0_24px_48px_rgba(0,0,0,0.28)]">
+            <div className="text-5xl font-bold leading-none text-white/95 md:text-6xl">
+              01
+            </div>
+            <h3 className="mt-5 text-2xl font-semibold md:text-3xl">
               Venture Funding Opportunities
             </h3>
-            <p className="mt-3 text-white/85">
+            <p className="mt-3 max-w-2xl text-lg text-white/88 md:text-xl">
               Connect with VCs and other industry professionals.
             </p>
           </div>
+          </Reveal>
 
-          <div className="rounded-3xl border border-white/20 bg-white/5 p-7 backdrop-blur-md">
-            <div className="mb-5 h-1.5 w-20 rounded-full bg-gradient-to-r from-[#ff4e6e] to-[#52c7ff]" />
-            <h3 className="text-2xl font-semibold">Skilled Network</h3>
-            <p className="mt-3 text-white/85">
+          <Reveal delay={80} className="md:col-span-2">
+          <div className="rounded-[30px] border border-white/15 bg-[linear-gradient(180deg,#2f97e8_0%,#184f82_100%)] p-8 shadow-[0_18px_40px_rgba(0,0,0,0.18)] transition duration-300 hover:scale-[1.02] hover:border-white/30 hover:shadow-[0_24px_48px_rgba(0,0,0,0.28)]">
+            <div className="text-5xl font-bold leading-none text-white/95 md:text-6xl">
+              02
+            </div>
+            <h3 className="mt-5 text-2xl font-semibold md:text-3xl">
+              Skilled Network
+            </h3>
+            <p className="mt-3 text-lg text-white/88 md:text-xl">
               Join our community of founders and consultants.
             </p>
           </div>
+          </Reveal>
 
-          <div className="rounded-3xl border border-white/20 bg-white/5 p-7 backdrop-blur-md">
-            <div className="mb-5 h-1.5 w-20 rounded-full bg-gradient-to-r from-[#ff4e6e] to-[#52c7ff]" />
-            <h3 className="text-2xl font-semibold">Exclusive Resources</h3>
-            <p className="mt-3 text-white/85">
+          <Reveal delay={0} className="md:col-span-2">
+          <div className="rounded-[30px] border border-white/15 bg-[linear-gradient(180deg,#2f97e8_0%,#184f82_100%)] p-8 shadow-[0_18px_40px_rgba(0,0,0,0.18)] transition duration-300 hover:scale-[1.02] hover:border-white/30 hover:shadow-[0_24px_48px_rgba(0,0,0,0.28)]">
+            <div className="text-5xl font-bold leading-none text-white/95 md:text-6xl">
+              03
+            </div>
+            <h3 className="mt-5 text-2xl font-semibold md:text-3xl">
+              Exclusive Resources
+            </h3>
+            <p className="mt-3 text-lg text-white/88 md:text-xl">
               Attend exclusive events, competitions, and trips.
             </p>
           </div>
+          </Reveal>
 
-          <div className="rounded-3xl border border-white/20 bg-white/5 p-7 backdrop-blur-md">
-            <div className="mb-5 h-1.5 w-20 rounded-full bg-gradient-to-r from-[#ff4e6e] to-[#52c7ff]" />
-            <h3 className="text-2xl font-semibold">
+          <Reveal delay={80} className="md:col-span-4">
+          <div className="rounded-[30px] border border-white/15 bg-[linear-gradient(180deg,#9f163b_0%,#5a0d24_100%)] p-8 shadow-[0_18px_40px_rgba(0,0,0,0.18)] transition duration-300 hover:scale-[1.02] hover:border-white/30 hover:shadow-[0_24px_48px_rgba(0,0,0,0.28)]">
+            <div className="text-5xl font-bold leading-none text-white/95 md:text-6xl">
+              04
+            </div>
+            <h3 className="mt-5 text-2xl font-semibold md:text-3xl">
               Entrepreneurial Essentials
             </h3>
-            <p className="mt-3 text-white/85">
+            <p className="mt-3 max-w-2xl text-lg text-white/88 md:text-xl">
               Learn how to prepare and pitch your startup.
             </p>
           </div>
+          </Reveal>
         </div>
       </section>
 
@@ -253,8 +321,10 @@ export default function Home() {
           alt=""
           className="pointer-events-none absolute -right-1/4 top-0 -z-10 opacity-20"
         />
-        <h2 className="text-4xl font-bold">What Our Members Say</h2>
-        <div className="mt-8">
+        <Reveal>
+          <h2 className="text-4xl font-bold">What Our Members Say</h2>
+        </Reveal>
+        <Reveal className="mt-8">
           <div className="rounded-3xl border border-white/20 bg-white/5 p-8 backdrop-blur-md md:p-10">
             <p className="text-lg leading-relaxed text-white/85">
               &ldquo;As a Commerce student with intersecting interests in
@@ -282,11 +352,11 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
 
-      {/* Upcoming Events Section */}
-      <section className="relative z-10 mx-auto w-[min(1120px,92%)] py-16">
+      {/* Past Events Section */}
+      <section className="relative z-10 py-16">
         <Image
           src="/red-gradient.svg"
           width={900}
@@ -294,50 +364,30 @@ export default function Home() {
           alt=""
           className="pointer-events-none absolute -right-1/3 top-1/4 -z-10 opacity-25"
         />
-        <h2 className="text-4xl font-bold">Upcoming Events</h2>
-        <div className="mt-8 space-y-4">
-          <div className="flex flex-col gap-4 rounded-3xl border border-white/20 bg-white/5 p-6 backdrop-blur-md md:flex-row md:items-center md:justify-between">
-            <div>
-              <h3 className="text-xl font-semibold">Pitch Night</h3>
-              <p className="mt-2 text-white/85">
-                Watch founders pitch their latest ventures to a panel of judges
-                and investors.
-              </p>
+        <Reveal className="mx-auto w-[min(1120px,92%)] text-center">
+          <h2 className="text-4xl font-bold md:text-5xl">Past Events &amp; Speakers</h2>
+          <p className="mt-3 text-lg text-white/70">
+            Check out some photos from past InQUbate events.
+          </p>
+        </Reveal>
+        <Reveal className="event-marquee-wrap mt-10 overflow-hidden">
+          <div className="event-marquee flex w-max gap-6 px-6 md:gap-8">
+          {[...pastEvents, ...pastEvents].map((event, index) => (
+            <div
+              key={`${event.title}-${index}`}
+              className="group w-[78vw] max-w-[560px] flex-none overflow-hidden rounded-[34px] border border-white/15 bg-white/[0.04] backdrop-blur-md transition duration-300 hover:scale-[1.01] hover:border-white/25 hover:bg-white/[0.06]"
+            >
+              <div className="relative h-[360px] overflow-hidden md:h-[420px]">
+                <img
+                  src={event.imageSrc}
+                  alt={event.title}
+                  className="h-full w-full object-cover opacity-90 transition duration-500 group-hover:scale-[1.06]"
+                />
+              </div>
             </div>
-            <div className="text-right">
-              <p className="font-semibold">March 24, 2025</p>
-              <p className="text-sm text-white/60">6:00 PM • Goodes Hall</p>
-            </div>
+          ))}
           </div>
-          <div className="flex flex-col gap-4 rounded-3xl border border-white/20 bg-white/5 p-6 backdrop-blur-md md:flex-row md:items-center md:justify-between">
-            <div>
-              <h3 className="text-xl font-semibold">Workshop: Building MVPs</h3>
-              <p className="mt-2 text-white/85">
-                Learn how to build and ship a minimum viable product in under
-                two weeks.
-              </p>
-            </div>
-            <div className="text-right">
-              <p className="font-semibold">April 3, 2025</p>
-              <p className="text-sm text-white/60">5:30 PM • Mitchell Hall</p>
-            </div>
-          </div>
-          <div className="flex flex-col gap-4 rounded-3xl border border-white/20 bg-white/5 p-6 backdrop-blur-md md:flex-row md:items-center md:justify-between">
-            <div>
-              <h3 className="text-xl font-semibold">
-                Founder Fireside Chat
-              </h3>
-              <p className="mt-2 text-white/85">
-                Hear from local founders about their journey from idea to
-                launch.
-              </p>
-            </div>
-            <div className="text-right">
-              <p className="font-semibold">April 15, 2025</p>
-              <p className="text-sm text-white/60">7:00 PM • Virtual</p>
-            </div>
-          </div>
-        </div>
+        </Reveal>
       </section>
 
       <div ref={footerRef}>
@@ -348,6 +398,14 @@ export default function Home() {
         .partners-marquee {
           width: max-content;
           animation: scroll-left 30s linear infinite;
+        }
+
+        .event-marquee-wrap:hover .event-marquee {
+          animation-play-state: paused;
+        }
+
+        .event-marquee {
+          animation: scroll-left 32s linear infinite;
         }
 
         @keyframes scroll-left {
