@@ -7,6 +7,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      spacing: {
+        // Responsive spacing scale using rems (rem = 16px)
+        "section-xs": "clamp(1rem, 5vw, 2rem)",
+        "section-sm": "clamp(1.5rem, 8vw, 3rem)",
+        "section-md": "clamp(2rem, 10vw, 4rem)",
+        "section-lg": "clamp(3rem, 12vw, 5rem)",
+        "section-xl": "clamp(4rem, 15vw, 6rem)",
+        "section-2xl": "clamp(5rem, 20vw, 8rem)",
+      },
       keyframes: {
         fade: {
           "0%": { opacity: "0" },

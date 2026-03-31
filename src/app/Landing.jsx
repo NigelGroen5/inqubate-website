@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 
 export default function Landing() {
   return (
-    <div className="relative mb-20 md:mb-24">
+    <div className="relative mb-20 md:mb-24 lg:mb-32">
       <Tube />
       <Navbar />
       <Image

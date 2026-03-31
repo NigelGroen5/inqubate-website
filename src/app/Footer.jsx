@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative z-10 mt-32 border-t border-white/10 py-12">
+    <footer className="relative z-10 mt-24 md:mt-28 lg:mt-32 border-t border-white/10 py-8 md:py-10 lg:py-12">
       <div className="mx-auto w-[min(1120px,92%)]">
-        <div className="flex flex-col items-start justify-between gap-8 md:flex-row">
+        <div className="flex flex-col items-start justify-between gap-6 md:gap-8 md:flex-row">
           <div>
             <p className="text-2xl font-semibold tracking-wide">inqubate</p>
             <p className="mt-2 text-sm text-white/60">
@@ -12,7 +12,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-12">
+          <div className="flex flex-wrap gap-8 md:gap-10 lg:gap-12">
             <div>
               <p className="mb-3 text-sm font-semibold text-white/40">
                 Navigate
@@ -54,10 +54,10 @@ export default function Footer() {
             </div>
 
             <div>
-              <p className="mb-3 text-sm font-semibold text-white/40">
+              <p className="mb-2 md:mb-3 text-sm font-semibold text-white/40">
                 Connect
               </p>
-              <div className="flex gap-3">
+              <div className="flex gap-2 md:gap-3">
                 <a
                   href="https://www.instagram.com/inqubate.qu/"
                   target="_blank"

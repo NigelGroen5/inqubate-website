@@ -93,7 +93,7 @@ function PartnerLogo({ sponsor }) {
 
 export default function PartnersAndSponsors() {
   return (
-    <section className="relative z-10 mt-100 mb-50 overflow-hidden py-10">
+    <section className="relative z-10 my-20 md:my-32 lg:my-40 overflow-hidden py-10">
       <Reveal className="mx-auto mb-6 w-[min(1120px,92%)]">
         <h2 className="text-3xl font-bold md:text-4xl">
           Past Partners &amp; Sponsors

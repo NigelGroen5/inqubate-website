@@ -73,7 +73,7 @@ export default function MemberTestimonialsSection() {
   }, [go]);
 
   return (
-    <section className="relative z-10 mx-auto w-[min(1120px,92%)] py-16">
+    <section className="relative z-10 mx-auto w-[min(1120px,92%)] py-8 md:py-12 lg:py-16">
       <Image
         src="/red-gradient.svg"
         width={900}
@@ -95,14 +95,14 @@ export default function MemberTestimonialsSection() {
         </h2>
       </div>
 
-      <div className="relative mt-12 rounded-[30px] border border-white/15 bg-white/[0.04] p-6 shadow-[0_24px_60px_rgba(0,0,0,0.35)] backdrop-blur-md sm:p-8 md:p-10">
+      <div className="relative mt-8 md:mt-10 lg:mt-12 rounded-[30px] border border-white/15 bg-white/[0.04] p-6 shadow-[0_24px_60px_rgba(0,0,0,0.35)] backdrop-blur-md sm:p-8 md:p-10">
         <div
           className="pointer-events-none absolute inset-0 rounded-[30px] bg-[radial-gradient(ellipse_55%_40%_at_15%_20%,rgba(159,22,59,0.12),transparent_60%),radial-gradient(ellipse_50%_45%_at_90%_80%,rgba(47,151,232,0.1),transparent_55%)]"
           aria-hidden="true"
         />
 
-        <div className="relative flex flex-col items-center gap-8 md:flex-row md:items-start md:gap-10">
-          <div className="flex shrink-0 flex-col items-center gap-3 md:items-start">
+        <div className="relative flex flex-col items-center gap-6 md:gap-8 lg:gap-10 md:flex-row md:items-start">
+          <div className="flex shrink-0 flex-col items-center gap-2 md:gap-3 md:items-start">
             <div className="relative h-[7.5rem] w-[7.5rem] sm:h-36 sm:w-36">
               <div
                 className="absolute -inset-1 rounded-full bg-[linear-gradient(135deg,#2f97e8_0%,#9f163b_100%)] opacity-80 blur-sm"
@@ -165,7 +165,7 @@ export default function MemberTestimonialsSection() {
           </div>
         </div>
 
-        <div className="relative mt-10 flex flex-col items-stretch gap-6 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
+        <div className="relative mt-8 md:mt-10 lg:mt-12 flex flex-col items-stretch gap-4 md:gap-6 border-t border-white/10 pt-6 md:pt-8 lg:pt-10 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-2">
             <button
               type="button"

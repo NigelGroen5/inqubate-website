@@ -29,7 +29,7 @@ const stats = [
 
 export default function WhatIsInqubateStats() {
   return (
-    <div className="relative left-1/2 mt-12 w-screen -translate-x-1/2 overflow-visible px-4 py-8 sm:px-6 md:mt-14 md:py-12">
+    <div className="relative left-1/2 mt-10 md:mt-12 lg:mt-14 w-screen -translate-x-1/2 overflow-visible px-4 py-6 sm:px-6 md:py-8 lg:py-12">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute inset-x-0 top-1/2 h-72 -translate-y-1/2 rounded-[999px] bg-[radial-gradient(circle_at_center,rgba(73,192,255,0.16),transparent_62%)] blur-3xl md:h-[24rem]" />
 
@@ -73,7 +73,7 @@ export default function WhatIsInqubateStats() {
         </div>
       </div>
 
-      <div className="relative z-10 mx-auto flex w-[min(1180px,94%)] flex-col items-center gap-8 md:flex-row md:items-end md:justify-center md:gap-16">
+      <div className="relative z-10 mx-auto flex w-[min(1180px,94%)] flex-col items-center gap-6 md:gap-10 lg:gap-16 md:flex-row md:items-end md:justify-center">
         {stats.map((stat) => (
           <article
             key={stat.label}

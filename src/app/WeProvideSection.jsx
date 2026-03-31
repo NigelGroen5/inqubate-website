@@ -3,7 +3,7 @@ import Reveal from "./Reveal";
 
 export default function WeProvideSection() {
   return (
-    <section className="relative z-10 mx-auto w-[min(1120px,92%)] py-16">
+    <section className="relative z-10 mx-auto w-[min(1120px,92%)] py-8 md:py-12 lg:py-16">
       <Image
         src="/red-gradient.svg"
         width={900}
@@ -21,7 +21,7 @@ export default function WeProvideSection() {
       <Reveal>
         <h2 className="text-4xl font-bold">We Provide</h2>
       </Reveal>
-      <div className="mt-8 grid gap-6 md:grid-cols-6">
+      <div className="mt-6 md:mt-8 lg:mt-10 grid gap-6 md:gap-7 lg:gap-8 md:grid-cols-6">
         <Reveal delay={0} className="md:col-span-4">
         <div className="rounded-[30px] border border-white/15 bg-[linear-gradient(180deg,#9f163b_0%,#5a0d24_100%)] p-8 shadow-[0_18px_40px_rgba(0,0,0,0.18)] transition duration-300 hover:scale-[1.02] hover:border-white/30 hover:shadow-[0_24px_48px_rgba(0,0,0,0.28)]">
           <div className="text-5xl font-bold leading-none text-white/95 md:text-6xl">

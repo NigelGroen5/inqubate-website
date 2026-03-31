@@ -11,7 +11,7 @@ const pastEvents = [
 
 export default function PastEventsSection() {
   return (
-    <section className="relative z-10 py-16">
+    <section className="relative z-10 py-8 md:py-12 lg:py-16">
       <Image
         src="/red-gradient.svg"
         width={900}
@@ -25,8 +25,8 @@ export default function PastEventsSection() {
           Check out some photos from past InQUbate events.
         </p>
       </Reveal>
-      <Reveal className="event-marquee-wrap mt-10 overflow-hidden">
-        <div className="event-marquee flex w-max gap-6 px-6 md:gap-8">
+      <Reveal className="event-marquee-wrap mt-8 md:mt-10 lg:mt-12 overflow-hidden">
+        <div className="event-marquee flex w-max gap-6 md:gap-7 lg:gap-8 px-6 md:px-8">
         {[...pastEvents, ...pastEvents].map((event, index) => (
           <div
             key={`${event.title}-${index}`}
