@@ -6,7 +6,7 @@ const stats = [
     label: "Ventures",
     coneSrc: "/partner-logos/Cone1.svg",
     coneClassName: "h-80 w-52 md:h-[26rem] md:w-64",
-    textClassName: "md:pl-2",
+    textClassName: "",
     titleClassName: "max-w-[13rem]",
   },
   {
@@ -22,8 +22,8 @@ const stats = [
     label: "seed funding",
     coneSrc: "/partner-logos/Cone3.svg",
     coneClassName: "h-[24rem] w-56 md:h-[34rem] md:w-80",
-    textClassName: "md:-ml-2",
-    titleClassName: "w-[13rem] sm:w-[16rem] md:w-[20rem]",
+    textClassName: "md:-ml-10",
+    titleClassName: "w-[13rem] sm:w-[16rem] md:w-[20rem] !ml-16 md:!ml-24",
   },
 ];
 
@@ -77,18 +77,18 @@ export default function WhatIsInqubateStats() {
         {stats.map((stat) => (
           <article
             key={stat.label}
-            className={`relative flex items-end justify-center text-center text-white ${stat.textClassName}`}
+            className={`flex flex-col items-center text-center text-white ${stat.textClassName}`}
           >
+            <h3 className={`mb-[-0.4rem] ml-10 md:ml-16 text-3xl font-bold leading-none tracking-tight sm:mb-[-0.55rem] sm:text-4xl md:mb-[-0.8rem] md:text-5xl ${stat.titleClassName}`}>
+              {stat.value}
+              <span className="mt-2 block">{stat.label}</span>
+            </h3>
             <img
               src={stat.coneSrc}
               alt=""
               aria-hidden="true"
               className={`object-contain drop-shadow-[0_28px_60px_rgba(0,0,0,0.24)] ${stat.coneClassName}`}
             />
-            <h3 className={`absolute bottom-full left-1/2 z-10 mb-[-0.4rem] -translate-x-1/2 text-3xl font-bold leading-none tracking-tight sm:mb-[-0.55rem] sm:text-4xl md:mb-[-0.8rem] md:text-5xl ${stat.titleClassName}`}>
-              {stat.value}
-              <span className="mt-2 block">{stat.label}</span>
-            </h3>
           </article>
         ))}
       </div>
