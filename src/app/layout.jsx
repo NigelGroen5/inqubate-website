@@ -1,4 +1,8 @@
+import { Inter, Rubik } from "next/font/google";
 import "./globals.css";
+
+const inter = Inter({ subsets: ["latin"] });
+const rubik = Rubik({ subsets: ["latin"], weight: "700", variable: "--font-rubik" });
 
 export const metadata = {
   title: "InQUbate",
@@ -13,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="w-full">
-      <body className="relative min-h-screen overflow-x-hidden bg-black text-white">
+      <body className={`${inter.className} ${rubik.variable} relative min-h-screen overflow-x-hidden bg-black text-white`}>
         <div className="pointer-events-none absolute inset-0 -z-50 overflow-hidden">
           <div className="absolute inset-y-0 left-3 w-px bg-white/10 md:left-6" />
           <div className="absolute inset-y-0 right-3 w-px bg-white/10 md:right-6" />

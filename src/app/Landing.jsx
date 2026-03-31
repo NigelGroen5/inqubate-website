@@ -26,7 +26,7 @@ export default function Landing() {
           <h1 className="w-96 text-6xl font-bold leading-snug">
             Queen&apos;s <br /> #1 Incubator
           </h1>
-          <p className="mt-3 text-3xl">🚀 Innovate, Collaborate, & Succeed</p>
+          <p className="mt-3 text-3xl">Innovate, Collaborate, & Succeed</p>
         </div>
 
         <div className="animate-fade-in mt-14 md:absolute md:right-[20%] md:top-[50%] md:mt-0 md:w-[48vw] md:max-w-[680px]">
