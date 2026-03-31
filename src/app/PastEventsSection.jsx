@@ -20,8 +20,8 @@ export default function PastEventsSection() {
         className="pointer-events-none absolute -right-1/3 top-1/4 -z-10 opacity-25"
       />
       <Reveal className="mx-auto w-[min(1120px,92%)] text-center">
-        <h2 className="text-4xl font-bold md:text-5xl">Past Events &amp; Speakers</h2>
-        <p className="mt-3 text-lg text-white/70">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">Past Events &amp; Speakers</h2>
+        <p className="mt-2 sm:mt-3 text-sm sm:text-base md:text-lg text-white/70">
           Check out some photos from past InQUbate events.
         </p>
       </Reveal>
@@ -30,9 +30,9 @@ export default function PastEventsSection() {
         {[...pastEvents, ...pastEvents].map((event, index) => (
           <div
             key={`${event.title}-${index}`}
-            className="group w-[78vw] max-w-[560px] flex-none overflow-hidden rounded-[34px] border border-white/15 bg-white/[0.04] backdrop-blur-md transition duration-300 hover:scale-[1.01] hover:border-white/25 hover:bg-white/[0.06]"
+            className="group w-[78vw] max-w-[560px] flex-none overflow-hidden rounded-lg sm:rounded-2xl md:rounded-3xl lg:rounded-[34px] border border-white/15 bg-white/[0.04] backdrop-blur-md transition duration-300 hover:scale-[1.01] hover:border-white/25 hover:bg-white/[0.06]"
           >
-            <div className="relative h-[360px] overflow-hidden md:h-[420px]">
+            <div className="relative h-[240px] sm:h-[300px] md:h-[360px] lg:h-[420px] overflow-hidden">
               <img
                 src={event.imageSrc}
                 alt={event.title}

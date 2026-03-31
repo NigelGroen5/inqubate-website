@@ -21,12 +21,12 @@ export default function Landing() {
         alt="blue gradient"
         className="absolute -z-30 right-0 top-0"
       />
-      <div className="relative h-[68vh] min-h-[560px] px-6 md:h-[72vh] md:px-10">
-        <div className="animate-fade-in pt-28 md:absolute md:left-[1.5%] md:top-[56%] md:w-[420px] md:-translate-y-1/2 md:pt-0">
-          <h1 className="w-96 text-6xl font-bold leading-snug">
+      <div className="relative h-[60vh] sm:h-[65vh] md:h-[68vh] min-h-[560px] px-5 sm:px-6 md:px-10">
+        <div className="animate-fade-in pt-20 sm:pt-24 md:pt-28 md:absolute md:left-[1.5%] md:top-[56%] md:w-[420px] md:-translate-y-1/2 md:pt-0">
+          <h1 className="w-full sm:w-96 text-4xl sm:text-5xl md:text-6xl font-bold leading-snug">
             Queen&apos;s <br /> #1 Incubator
           </h1>
-          <p className="mt-3 text-3xl">Innovate, Collaborate, & Succeed</p>
+          <p className="mt-2 sm:mt-3 text-lg sm:text-xl md:text-2xl lg:text-3xl">Innovate, Collaborate, & Succeed</p>
         </div>
 
         <div className="animate-fade-in mt-14 md:absolute md:right-[20%] md:top-[50%] md:mt-0 md:w-[48vw] md:max-w-[680px]">

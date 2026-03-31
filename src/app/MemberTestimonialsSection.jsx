@@ -90,12 +90,12 @@ export default function MemberTestimonialsSection() {
       />
 
       <div>
-        <h2 className="text-4xl font-bold md:text-[2.5rem] md:leading-tight">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-bold md:leading-tight">
           What Our Members Say
         </h2>
       </div>
 
-      <div className="relative mt-8 md:mt-10 lg:mt-12 rounded-[30px] border border-white/15 bg-white/[0.04] p-6 shadow-[0_24px_60px_rgba(0,0,0,0.35)] backdrop-blur-md sm:p-8 md:p-10">
+      <div className="relative mt-8 md:mt-10 lg:mt-12 rounded-xl sm:rounded-2xl md:rounded-[30px] border border-white/15 bg-white/[0.04] p-5 sm:p-6 md:p-8 lg:p-10 shadow-[0_24px_60px_rgba(0,0,0,0.35)] backdrop-blur-md">
         <div
           className="pointer-events-none absolute inset-0 rounded-[30px] bg-[radial-gradient(ellipse_55%_40%_at_15%_20%,rgba(159,22,59,0.12),transparent_60%),radial-gradient(ellipse_50%_45%_at_90%_80%,rgba(47,151,232,0.1),transparent_55%)]"
           aria-hidden="true"
@@ -140,7 +140,7 @@ export default function MemberTestimonialsSection() {
 
           <div className="relative min-w-0 flex-1">
             <div
-              className="relative rounded-[22px] border border-white/18 bg-black/45 px-5 py-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] sm:px-7 sm:py-7 md:rounded-[24px] md:px-8 md:py-8"
+              className="relative rounded-lg sm:rounded-xl md:rounded-2xl lg:rounded-[24px] border border-white/18 bg-black/45 px-4 py-5 sm:px-5 sm:py-6 md:px-7 md:py-7 lg:px-8 lg:py-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]"
               aria-live="polite"
             >
               <div
@@ -152,10 +152,10 @@ export default function MemberTestimonialsSection() {
                 aria-hidden="true"
               />
 
-              <p className="font-serif text-4xl leading-none text-white/25 md:text-5xl">
+              <p className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-none text-white/25">
                 &ldquo;
               </p>
-              <blockquote className="-mt-1 text-base leading-relaxed text-white/90 md:text-lg md:leading-relaxed">
+              <blockquote className="-mt-1 text-sm sm:text-base md:text-base lg:text-lg leading-relaxed text-white/90 md:leading-relaxed">
                 {current.quote}
               </blockquote>
               <p className="mt-5 text-xs font-medium uppercase tracking-[0.12em] text-white/35">

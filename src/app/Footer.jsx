@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="mx-auto w-[min(1120px,92%)]">
         <div className="flex flex-col items-start justify-between gap-6 md:gap-8 md:flex-row">
           <div>
-            <p className="text-2xl font-semibold tracking-wide">inqubate</p>
+            <p className="text-xl sm:text-2xl font-semibold tracking-wide">inqubate</p>
             <p className="mt-2 text-sm text-white/60">
               Queen&apos;s #1 Incubator
             </p>
