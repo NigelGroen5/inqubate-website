@@ -49,7 +49,11 @@ export default function Home() {
       <style jsx global>{`
         .partners-marquee {
           width: max-content;
-          animation: scroll-left 30s linear infinite;
+          animation: scroll-left 40s linear infinite;
+        }
+
+        .partners-marquee:hover {
+          animation-play-state: paused;
         }
 
         .event-marquee-wrap:hover .event-marquee {
