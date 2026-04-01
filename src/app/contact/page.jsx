@@ -29,7 +29,7 @@ export default function ContactPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative z-10 mx-auto w-[min(1120px,92%)] py-16">
+      <section className="relative z-10 mx-auto w-[min(1280px,92%)] py-16">
         <div className="animate-fade-in">
           <h1 className="text-5xl font-bold">Get in Touch</h1>
           <p className="mt-4 text-lg text-white/85">
@@ -39,7 +39,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form */}
-      <section className="relative z-10 mx-auto w-[min(1120px,92%)] py-8 pb-16">
+      <section className="relative z-10 mx-auto w-[min(1280px,92%)] py-8 pb-16">
         <div className="mx-auto max-w-2xl">
           <form
             onSubmit={handleSubmit}

@@ -30,3 +30,48 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-rubik), sans-serif;
   font-weight: 700;
 }
+
+.hero-vignette {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 60%;
+  background: linear-gradient(
+    to right,
+    rgba(11, 11, 18, 0.95) 0%,
+    rgba(11, 11, 18, 0.85) 50%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-cta-primary {
+  background: linear-gradient(135deg, #e84057, #d63050);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 15px 32px;
+  border-radius: 10px;
+  box-shadow: 0 6px 30px rgba(232, 64, 87, 0.3);
+  color: white;
+  text-decoration: none;
+}
+
+.hero-cta-primary:hover {
+  box-shadow: 0 8px 40px rgba(232, 64, 87, 0.45);
+}
+
+.hero-cta-secondary {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 15px 32px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+}

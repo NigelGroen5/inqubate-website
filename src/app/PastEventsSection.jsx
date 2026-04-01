@@ -19,7 +19,7 @@ export default function PastEventsSection() {
         alt=""
         className="pointer-events-none absolute -right-1/3 top-1/4 -z-10 opacity-25"
       />
-      <Reveal className="mx-auto w-[min(1120px,92%)] text-center">
+      <Reveal className="mx-auto w-[min(1280px,92%)] text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">Past Events &amp; Speakers</h2>
         <p className="mt-2 sm:mt-3 text-sm sm:text-base md:text-lg text-white/70">
           Check out some photos from past InQUbate events.

@@ -4,7 +4,7 @@ import WhatIsInqubateStatsTube from "./WhatIsInqubateStatsTube";
 export default function AboutSection() {
   return (
     <>
-      <section className="relative z-10 mx-auto w-[min(1120px,92%)] py-8 md:py-12 lg:py-16">
+      <section className="relative z-10 mx-auto w-[min(1280px,92%)] py-8 md:py-12 lg:py-16">
         <Reveal>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">What is InQUbate?</h2>
           <p className="mt-6 text-lg leading-relaxed text-white/85">

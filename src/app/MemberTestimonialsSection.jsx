@@ -73,7 +73,7 @@ export default function MemberTestimonialsSection() {
   }, [go]);
 
   return (
-    <section className="relative z-10 mx-auto w-[min(1120px,92%)] py-8 md:py-12 lg:py-16">
+    <section className="relative z-10 mx-auto w-[min(1280px,92%)] py-8 md:py-12 lg:py-16">
       <Image
         src="/red-gradient.svg"
         width={900}

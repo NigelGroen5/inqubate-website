@@ -2,15 +2,22 @@ import Image from "next/image";
 
 export default function Tube() {
   return (
-    <div className="absolute -z-10 top-18 left-0 right-10 md:right-24">
+    <div
+      className="pointer-events-none absolute z-0 hidden min-[1200px]:block"
+      style={{
+        top: "50%",
+        left: 0,
+        transform: "translateY(-50%)",
+        width: "90vw",
+      }}
+    >
       <Image
         src="/tube.svg"
-        width={0}
-        height={0}
+        width={1920}
+        height={860}
         priority
-        sizes="(min-width: 768px) calc(100vw - 10rem), calc(100vw - 3rem)"
-        style={{ width: "90%", height: "860px" }}
-        className="pointer-events-none select-none"
+        sizes="95vw"
+        className="pointer-events-none select-none h-auto w-full opacity-85"
         alt="tube"
       />
     </div>

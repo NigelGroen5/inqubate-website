@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative z-10 mt-24 md:mt-28 lg:mt-32 border-t border-white/10 py-8 md:py-10 lg:py-12">
-      <div className="mx-auto w-[min(1120px,92%)]">
+    <footer className="relative z-10 mt-16 border-t border-white/10 py-8 md:py-10 lg:py-12">
+      <div className="mx-auto w-[min(1280px,92%)]">
         <div className="flex flex-col items-start justify-between gap-6 md:gap-8 md:flex-row">
           <div>
             <p className="text-xl sm:text-2xl font-semibold tracking-wide">inqubate</p>

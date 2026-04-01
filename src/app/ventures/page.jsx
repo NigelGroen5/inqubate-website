@@ -283,7 +283,7 @@ export default function VenturesPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative z-10 mx-auto w-[min(1120px,92%)] pb-8 pt-20">
+      <section className="relative z-10 mx-auto w-[min(1280px,92%)] pb-8 pt-20">
         <Reveal className="max-w-2xl">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-white/35">
             inQUbate Portfolio
@@ -298,7 +298,7 @@ export default function VenturesPage() {
       </section>
 
       {/* Featured Venture */}
-      <section className="relative z-10 mx-auto w-[min(1120px,92%)] py-10">
+      <section className="relative z-10 mx-auto w-[min(1280px,92%)] py-10">
         <Reveal>
         <div className="group relative overflow-hidden rounded-3xl border border-white/15 bg-white/5 backdrop-blur-md transition-all duration-500 hover:border-white/25 hover:bg-white/[0.07]">
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/[0.04] via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
@@ -363,7 +363,7 @@ export default function VenturesPage() {
       </section>
 
       {/* Current Ventures (alternating) */}
-      <section className="relative z-10 mx-auto w-[min(1120px,92%)] space-y-8 py-10">
+      <section className="relative z-10 mx-auto w-[min(1280px,92%)] space-y-8 py-10">
         <Reveal>
           <h2 className="text-3xl font-bold">Current Ventures</h2>
         </Reveal>
@@ -417,7 +417,7 @@ export default function VenturesPage() {
       </section>
 
       {/* Past Ventures grid */}
-      <section className="relative z-10 mx-auto w-[min(1120px,92%)] py-16">
+      <section className="relative z-10 mx-auto w-[min(1280px,92%)] py-16">
         <Reveal className="mb-10">
           <h2 className="text-3xl font-bold">Past Ventures</h2>
           <p className="mt-2 text-white/45">
@@ -436,7 +436,7 @@ export default function VenturesPage() {
 
       {/* Alumni Outcomes */}
       <section className="relative z-10 py-20">
-        <Reveal className="mx-auto mb-12 w-[min(1120px,92%)] text-center">
+        <Reveal className="mx-auto mb-12 w-[min(1280px,92%)] text-center">
           <h2 className="text-4xl font-bold">Alumni Outcomes</h2>
           <p className="mt-4 text-lg text-white/45">
             inQUbate alumni go on to succeed at top companies and startups.

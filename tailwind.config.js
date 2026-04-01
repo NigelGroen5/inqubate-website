@@ -25,10 +25,22 @@ module.exports = {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-33.333%)" },
         },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-6px)" },
+        },
+        pulse_dot: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.4" },
+        },
       },
       animation: {
         "fade-in": "fade .5s ease-out forwards",
         marquee: "marquee 25s linear infinite",
+        float: "float 6s ease-in-out infinite",
+        "float-delayed": "float 6s ease-in-out 2s infinite",
+        "float-delayed-2": "float 6s ease-in-out 4s infinite",
+        "pulse-dot": "pulse_dot 2s ease-in-out infinite",
       },
     },
   },

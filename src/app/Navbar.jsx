@@ -14,7 +14,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="relative z-20 mx-auto w-[min(1120px,92%)] pt-4 md:pt-5 lg:pt-6">
+    <header className="relative z-20 mx-auto w-[min(1280px,92%)] pt-4 md:pt-5 lg:pt-6">
       <nav className="flex flex-wrap items-center justify-between gap-3 md:gap-4 lg:gap-4 rounded-full border border-white/20 bg-white/5 px-4 md:px-5 py-2 md:py-3 backdrop-blur-md">
         <Link href="/" aria-label="inqubate home" className="flex items-center">
           <Image
