@@ -18,7 +18,7 @@ export default function WhatIsInqubateStatsTube() {
           width={0}
           height={0}
           sizes="120vw"
-          style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }}
+          style={{ width: "100%", height: "auto", objectFit: "contain", objectPosition: "center" }}
           className="pointer-events-none select-none"
           alt=""
         />
