@@ -22,13 +22,6 @@ const memberTestimonials = [
       "Joining inQUbate at Queen's was a game-changer—a supportive, creative, professional community that felt like home. With no tech background I built skills, launched a venture, and grew alongside incredible peers. I organized fireside chats, pitch competitions, and led our capstone trip to Silicon Valley. Unmatched experiential learning and a network of driven people—perfect if you're looking to grow.",
     photoSrc: "/testimonials/jacob-kranjac.png",
   },
-  {
-    id: "pobias-steinberg",
-    name: "Pobias Steinberg",
-    role: "B.F Intern",
-    quote: "Hi I am Po",
-    photoSrc: "/testimonials/pobias-steinberg.png",
-  },
 ];
 
 function Chevron({ dir }) {

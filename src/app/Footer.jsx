@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="mx-auto w-[min(1280px,92%)]">
         <div className="flex flex-col items-start justify-between gap-6 md:gap-8 md:flex-row">
           <div>
-            <p className="text-xl sm:text-2xl font-semibold tracking-wide">inqubate</p>
+            <p className="text-xl sm:text-2xl font-semibold tracking-wide">InQUbate</p>
             <p className="mt-2 text-sm text-white/60">
               Queen&apos;s #1 Incubator
             </p>
@@ -32,14 +32,6 @@ export default function Footer() {
                     className="text-white/85 transition hover:text-white"
                   >
                     Ventures
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/contact"
-                    className="text-white/85 transition hover:text-white"
-                  >
-                    Contact
                   </Link>
                 </li>
               </ul>
@@ -127,7 +119,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 border-t border-white/10 pt-6 text-center text-sm text-white/40">
-          © 2025 inqubate. All rights reserved.
+          © 2025 InQUbate. All rights reserved.
         </div>
       </div>
     </footer>

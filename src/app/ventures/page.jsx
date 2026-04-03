@@ -434,19 +434,6 @@ export default function VenturesPage() {
         </div>
       </section>
 
-      {/* Alumni Outcomes */}
-      <section className="relative z-10 py-20">
-        <Reveal className="mx-auto mb-12 w-[min(1280px,92%)] text-center">
-          <h2 className="text-4xl font-bold">Alumni Outcomes</h2>
-          <p className="mt-4 text-lg text-white/45">
-            inQUbate alumni go on to succeed at top companies and startups.
-          </p>
-        </Reveal>
-
-        <Reveal delay={120}>
-          <MarqueeLogos logos={companyLogos} />
-        </Reveal>
-      </section>
 
       <Footer />
     </main>
