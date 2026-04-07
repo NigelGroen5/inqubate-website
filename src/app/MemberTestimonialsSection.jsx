@@ -133,7 +133,7 @@ export default function MemberTestimonialsSection() {
 
           <div className="relative min-w-0 flex-1">
             <div
-              className="relative rounded-lg sm:rounded-xl md:rounded-2xl lg:rounded-[24px] border border-white/18 bg-black/45 px-4 py-5 sm:px-5 sm:py-6 md:px-7 md:py-7 lg:px-8 lg:py-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]"
+              className="relative min-h-[260px] rounded-lg sm:rounded-xl md:min-h-[320px] md:rounded-2xl lg:rounded-[24px] border border-white/18 bg-black/45 px-4 py-5 sm:px-5 sm:py-6 md:px-7 md:py-7 lg:px-8 lg:py-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]"
               aria-live="polite"
             >
               <div
