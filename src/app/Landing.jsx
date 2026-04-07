@@ -200,7 +200,7 @@ export default function Landing() {
           >
             {[
               { number: "40+", label: "Ventures Launched" },
-              { number: "$2M+", label: "Funding Raised" },
+              { number: "20+", label: "Industry Mentors" },
               { number: "6", label: "Cohorts Completed" },
             ].map((stat) => (
               <div key={stat.label}>

@@ -2,7 +2,7 @@
 
 const stats = [
   {
-    value: "10+",
+    value: "40+",
     label: "Ventures",
     coneSrc: "/partner-logos/Cone1.svg",
     coneClassName: "h-80 w-52 md:h-[26rem] md:w-64",
