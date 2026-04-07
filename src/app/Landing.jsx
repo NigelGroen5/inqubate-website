@@ -163,8 +163,11 @@ export default function Landing() {
           {/* CTA buttons */}
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <a
-              href="#contact"
+              href="https://linktr.ee/inQUbate"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hero-cta-primary group inline-flex items-center gap-2 transition-all duration-200 hover:-translate-y-0.5"
+              aria-label="Innovate with us (opens Linktree in a new tab)"
             >
               Innovate With Us
               <svg
